@@ -1,158 +1,181 @@
-*, *::before, *::after, h6, p {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+    --color-accent-1: #c6a288;
+    --color-accent-2: #c99678;
+    --color-secondary-1: #4b403e;
+    --color-secondary-2: #120d0c;
+    --color-primary-1: #f3f3f3;
+    --color-primary-2: #d6d6d6;
+
+    --header-font: "Roboto", sans-serif;
+    --content-font: "Open Sans", sans-serif;
 }
 
-/* Dev */
-.contents,
-.contents * {
-    /* outline: 1px dashed yellow; */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--content-font);
 }
 
 body {
-    height: 300vh;
-    width: 100dvh;
-    overflow-x: hidden;
+    color: var(--color-primary-1);
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--color-secondary-2);
+    padding: 1rem;
+}
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header .btn {
+    color: var(--color-primary-1);
+    text-decoration: none;
+    font-family: var(--header-font);
+    padding: 0.5rem 1rem;
+}
+
+.header .btn.active,
+.header .btn:hover {
+    background-color: var(--color-accent-1);
 }
 
 .hero-background {
-    width: 100dvw;
-    height: 100dvh;
-    background: url('../img/grassland-wallpaper.jpg');
-    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    background: url('https://steamuserimages-a.akamaihd.net/ugc/1768205841126702535/2F0C94187467DF92EE305D9F42535CA3B96ACAE7/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
+    background-size: cover;
+    background-position: center;
     position: relative;
-
-    & .mascot {
-        position: absolute;
-        right: 2rem;
-        bottom: 0;
-        height: 15rem;
-    }
 }
 
 .contents {
-    width: 100dvw;
-    height: calc(100dvh - 60px);
+    width: 100%;
+    height: calc(100vh - 60px);
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     color: white;
     justify-content: space-between;
+    padding: 2rem;
+}
 
-    & .top {
-        & .logo {
-            height: 50px;
-        }
-    }
+.logo {
+    height: 50px;
+}
 
-    & .middle {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        
-        & .note {
-            font-size: 1rem;
-            padding: 2rem;
-            }
+.name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
 
-            & .card {
-                padding: 2rem;
-                width: 35dvw;
-                background: rgba(255, 255, 255, 0.1);
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.301);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                font-size: 1.2rem;
-                border: 1px solid rgba(245, 245, 245, 0.212);
-                color: white;
-                border-radius: 15px;
+.tagline {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
 
-                & .card-img {
-                    position: absolute;
-                    height: calc(100% - 4rem);
-                    width: fit-content;
-                    right: 2rem;
-                    z-index: -1;
-                }
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
 
-                & .title {
-                    padding: 1rem 0;
-                    border-bottom: 1px white solid;
-                    width: fit-content;
-                    font-weight: 700;
-                    letter-spacing: 1.2rem;
-                    filter: invert(1);
-                }
+.card {
+    padding: 2rem;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+}
 
-                & .description {
-                    padding: 1rem 0;
-                    width: 65%;
-                    font-size: 1rem;
-                    text-align: justify;
-                    text-justify: inter-word;
-                    filter: invert(1);
-                }
+.card-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
 
-                & i {
-                    filter: invert(1);
-                }
-            }
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
 
-        & .others {
-            display: flex;
-            justify-content: space-between;
-            width: 35dvw;
-            padding: 2rem;
+.description {
+    font-size: 1rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
 
-            p {
-                filter: invert(1);
-                padding: 0;
-                margin: 0;
-            }
-        }
-    }
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
 
-    & .bottom {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 3rem;
-        filter: invert(1);
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
-        & .creators {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+.bottom {
+    display: flex;
+    gap: 1rem;
+    filter: invert(1);
+}
 
-            & h6 {
-                padding: 0;
-                margin: 0;
-                font-weight: 650;
-            }
+.creators {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-            & p {
-                padding: 0;
-                margin: 0;
-            }
-        }
-    }
+.creators h6 {
+    font-weight: 650;
 }
 
 @media only screen and (max-width: 1024px) {
-    .contents {
-        & .middle {
-            & .card, & .others {
-                width: 70dvw;
-
-            }
-        }
-
+    .card,
+    .contact-info {
+        width: 70%;
     }
 
-    .hero-background {
-        & .mascot {
-            height: 10rem;
-        }
+    .card-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
     }
 }

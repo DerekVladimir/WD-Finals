@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
 
 :root {
   --color-accent-1: #c6a288;
@@ -9,8 +9,8 @@
   --color-primary-1: #f3f3f3;
   --color-primary-2: #d6d6d6;
 
-  --header-font: "Poppins", sans-serif;
-  --content-font: "Urbanist", sans-serif;
+  --header-font: "Roboto", sans-serif;
+  --content-font: "Open Sans", sans-serif;
 }
 
 *,
@@ -20,15 +20,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--content-font);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--header-font);
 }
 
 body {
@@ -41,6 +32,30 @@ body {
   height: 100vh;
 }
 
+header {
+  width: 100%;
+  background-color: var(--color-secondary-2);
+  padding: 1rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+header .btn {
+  color: var(--color-primary-1);
+  text-decoration: none;
+  font-family: var(--header-font);
+  padding: 0.5rem 1rem;
+}
+
+header .btn.active,
+header .btn:hover {
+  background-color: var(--color-accent-1);
+}
+
 .wallpaper {
   position: absolute;
   object-fit: cover;
@@ -51,58 +66,60 @@ body {
   filter: sepia(0.4) hue-rotate(-10deg) opacity(0.6);
 }
 
-.top {
+main {
   display: flex;
   flex-direction: column;
-  padding-top: 5rem;
   align-items: center;
-  gap: 0.2rem;
-  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+}
 
-  & .course {
-    font-size: 2rem;
-    letter-spacing: 0.8rem;
-    font-weight: 300;
-  }
+.top {
+  margin-top: 5rem;
+}
 
-  & .title {
-    font-size: 5rem;
-    letter-spacing: 1rem;
-    padding-left: 7rem;
-  }
+.top .course {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  font-family: var(--header-font);
+}
 
-  & .subtitle {
-    font-weight: 500;
-    letter-spacing: 1rem;
-  }
+.top .title {
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+  font-family: var(--header-font);
+}
+
+.top .subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: var(--header-font);
 }
 
 .bottom {
-  padding-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.bottom .year {
+  font-weight: 300;
+}
+
+.bottom .descriptions {
+  margin-top: 1rem;
   font-size: 1rem;
-
-  & .year {
-    font-weight: 300;
-  }
-
-  & .logo {
-    height: 50px;
-  }
 }
 
-#loom-companion-mv3,
-.fiveserver-info-wrapper {
-  display: none;
-}
+@media only screen and (max-width: 768px) {
+  .top .title {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+  }
 
-@media only screen and (max-width: 1024px) {
-  .top {
-    & .title {
-      font-size: 4.5rem;
-      padding-left: 0;
-    }
+  .top .subtitle {
+    font-size: 1.2rem;
   }
 }

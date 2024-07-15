@@ -6,21 +6,21 @@
 <div align="center">
   <a href="https://github.com/zyx-0314/">
   <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+    <img src="https://media.tenor.com/GdmNvzhT24YAAAAM/ganyu-genshin-impact.gif" alt="Ganyu" width="130" height="100">
   </a>
 <!-- TODO: Change Title to the name of the title of your Project -->
-  <h3 align="center">Title</h3>
+  <h3 align="center">Finals Project</h3>
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  Short Description. (Optional)
+  This is to showcase all of the activities we had on our course
 </div>
 
 <br />
 
 <!-- TODO: Change the zyx-0314 into your github username  -->
 <!-- TODO: Change the WD-Template-Project into the same name of your folder -->
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-Template-Project)
+![](https://visit-counter.vercel.app/counter.png?page=DerekVladimir/WD-FINALS)
 
 ---
 
@@ -61,9 +61,14 @@ Description of the project in details.
 
 Guiding Question:
 - What is the project
+the project is a personal website 
 - Whats the purpose
+the main purpose of this project is to compile all of our activites and provide a engaging overview of our project
 - What are key components
+Multipage Website
 - What technology used and how it is used
+HTML 
+CSS
 
 ### Key Components
 <!-- TODO: List of Key Components -->
@@ -117,4 +122,4 @@ WD-ProjectName
 <!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| Alignment | How to align elements and other stuff | https://www.w3schools.com/css/css_text_align.asp |
